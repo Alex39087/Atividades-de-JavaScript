@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Tarefas</title>
+    <style>
+        body { background-color: rgb(111, 126, 126); font-family: sans-serif; text-align: center; }
+        .container { background: white; width: 300px; margin: 50px auto; padding: 20px; border-radius: 10px; }
+        ul { list-style: none; padding: 0; }
+        li { margin: 10px 0; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .concluido { text-decoration: line-through; color: gray; }
+        button { cursor: pointer; }
+        .btn-del { color: red; border: none; background: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Minhas Tarefas</h1>
+    <div class="container">
+        <input id="nome" type="text" placeholder="Digite uma tarefa...">
+        <button id="btn-add">Adicionar</button>
+        <ul id="Lista"></ul>
+    </div>
+    <script src="atividade5.js"></script>
+</body>
+</html>

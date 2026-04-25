@@ -1,27 +1,24 @@
-var textoElement = document.querySelector("#texto");
-var buttonElement = document.createElement('button');
-var buttonElement = document.createElement('imput');
-var buttonElement = document.createElement('ul');
+const inputNome = document.querySelector("#nome");
+const listaUl = document.querySelector("#Lista");
+const botaoAdd = document.querySelector("#add");
+const botaoLimpar = document.querySelector("#limpar");
 
-buttonElement.appendChild(document.createTextNode('Add'));
-textoElement.appendChild(imputElement);
-textoElement.appendChild(buttonElement);
-textoElement.appendChild(listElement);
-buttonElement.onclick = function(){
-    alert ("vou add nome na lista")
-};
+function adicionar() {
+    const nome = inputNome.value;
 
-imputElement.setAttribute('id', 'nome');
-imputElement.setAttribute('type', 'text');
-imputElement.setAttribute('id', 'lista');
+    if (nome.trim() !== "") {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(nome));
+        listaUl.appendChild(li);
 
-function add (){
-    var novoNome = inputElement.value;
-    var itemLista = document.createElement('li');
-    itemLista.appendChild(document.createTestNode(nomeNovo));
-    listElement.appendChild(itemLista);
-    importElement.value = "";
+        inputNome.value = "";
+        inputNome.focus();
+    }
 }
-buttonElement.onclick = function(){
-    add();
-};
+
+function limparTudo() {
+    listaUl.innerHTML = ""; 
+}
+
+botaoAdd.onclick = adicionar;
+botaoLimpar.onclick = limparTudo;
